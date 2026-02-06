@@ -1,0 +1,186 @@
+{
+  "kind": "build_request",
+  "title": "Warm, premium artisan landing page for Indian handmade handicrafts gifting brand",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page, high-converting marketing landing page for an Indian handmade handicrafts gifting brand that offers curated and customized gift hampers, using a warm, premium, artisan-focused visual design and consistent styling across all sections.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Design a high-converting landing page for an Indian handmade handicrafts gifting brand offering curated and customized gift hampers, with a warm, premium, artisan-focused design."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page is implemented as a single, scrollable page with clearly separated sections and consistent spacing/typography/colors.",
+        "Visual theme reads as warm + premium + artisan (e.g., earthy palette, textured accents, refined typography), without using a blue/purple primary palette.",
+        "Page is fully responsive (mobile/tablet/desktop) and maintains readable contrast and accessible font sizing."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a conversion-focused hero section with: brand headline/subheadline in English, primary CTA (e.g., “Build My Gift Hamper”), secondary CTA (e.g., “Explore Curated Hampers”), trust signals (e.g., handmade, ethically sourced, pan-India delivery—wording in English), and a premium hero visual.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Design a high-converting landing page... offering curated and customized gift hampers"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero contains 2 CTAs with distinct visual hierarchy (primary vs secondary).",
+        "Hero includes at least 3 trust signals displayed as badges/chips with icons.",
+        "CTA buttons scroll to the relevant sections (customization form / curated hampers section)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add key landing page sections tailored to curated/customized gift hampers: (1) Curated Hampers showcase (3–6 cards), (2) “Customize Your Hamper” step-by-step explainer, (3) Artisan story/values section highlighting handmade craftsmanship, (4) Social proof (testimonials/ratings), (5) FAQ, and (6) final CTA banner.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each section has a clear heading, supporting copy in English, and a consistent component style (cards, chips, separators).",
+        "Curated Hampers section shows at least 3 hamper examples with name, short description, and ‘Request This Hamper’ CTA.",
+        "FAQ is interactive (accordion-style) and includes at least 5 questions relevant to customization, lead time, shipping, and bulk/corporate gifting.",
+        "Final CTA section reiterates primary conversion action and links to the form."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement a lead-capture form for customized hampers that collects: name, email, phone (optional but recommended), occasion type, budget range, preferred items/themes (free text), quantity, delivery city/pincode (text), and an optional notes field; include client-side validation and a success state.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "...offering curated and customized gift hampers..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form validates required fields (name, email, occasion, budget, quantity) and shows inline error messages.",
+        "On submit, form calls the backend and shows a non-blocking loading state; on success it resets (or preserves) fields and displays a confirmation message.",
+        "No third-party email/SMS integrations are used."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add a minimal Motoko backend endpoint to store lead submissions (custom hamper inquiries) and return a confirmation response; persist submissions in stable storage so they survive canister upgrades.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend exposes an update method to create an inquiry and returns an ID and timestamp (or equivalent confirmation fields).",
+        "Inquiries are stored persistently (stable-compatible data structure) and are retrievable via a query method (for verification/testing).",
+        "Backend remains a single-actor architecture in the main Motoko actor file; add a migration file only if the generated template already includes state that must be upgraded."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add basic analytics-friendly structure without external services: semantic headings, consistent section IDs for CTA scrolling, and event hooks in code (e.g., function calls/logs) for key actions (primary CTA click, form submit success).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each major section has a stable DOM id (e.g., #curated, #customize, #testimonials, #faq).",
+        "Primary CTA scroll behavior uses these IDs and works on mobile and desktop.",
+        "Key actions are centralized in code (single handler functions) so adding real analytics later is straightforward, without integrating any external analytics SDK now."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Ensure the landing page meets baseline UX quality: fast initial render, optimized images, accessible interactions (keyboard-friendly accordions and focus states), and polished microcopy suitable for a premium gifting brand (English only).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All interactive elements are keyboard accessible and show visible focus styles.",
+        "Images are served as static assets and sized appropriately to avoid layout shift.",
+        "Copy is coherent, premium in tone, and consistent (no placeholder lorem ipsum)."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create and apply a coherent visual theme (colors, typography, spacing, and component styling) that evokes warm, premium, artisan craftsmanship, and enforce it consistently across the page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "...with a warm, premium, artisan-focused design."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Theme includes a defined primary/secondary color set, background treatment, and typography pairing used across hero, cards, buttons, and FAQ.",
+        "Buttons, cards, and badges share a consistent design system (radii, shadows, borders).",
+        "Theme avoids a default ‘generic SaaS’ look and does not rely on a blue/purple primary palette."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Add a lightweight footer with brand reassurance and conversion-supporting links: Contact (mailto/phone text only), Shipping/Returns (static text section or modal), and a short brand note about handmade/craftsmanship.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer includes at least one contact method presented as text and/or clickable links (mailto: / tel:).",
+        "Shipping/Returns information is present and readable without navigating away (either inline section or dialog)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use React + TypeScript + Tailwind + shadcn/ui composition patterns (do not edit immutable UI component source files).",
+    "Backend must remain a single Motoko actor; do not introduce additional backend services or external databases.",
+    "Do not integrate third-party auth providers; Internet Identity is the only supported auth (not required for this landing page).",
+    "Use English for all user-facing text."
+  ],
+  "nonGoals": [
+    "E-commerce checkout, payments, or shopping cart.",
+    "Real-time chat or messaging.",
+    "Third-party marketing integrations (Google Analytics, Meta Pixel, email marketing tools).",
+    "Complex admin dashboard for managing inquiries (beyond a basic retrieval method for verification/testing)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Warm premium hero banner featuring an Indian artisan gifting aesthetic (hero-handicrafts-gifting.dim_1600x900.png)",
+      "Set of 3 product/hamper card images with handcrafted gift hamper styling (hamper-set-1.dim_900x600.png)",
+      "Set of 3 product/hamper card images with handcrafted gift hamper styling (hamper-set-2.dim_900x600.png)",
+      "Set of 3 product/hamper card images with handcrafted gift hamper styling (hamper-set-3.dim_900x600.png)",
+      "Subtle earthy seamless pattern/texture background (artisan-texture-pattern.dim_1024x1024.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

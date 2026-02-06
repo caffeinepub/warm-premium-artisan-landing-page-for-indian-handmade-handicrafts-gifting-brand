@@ -1,0 +1,285 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-06T15:45:40.756Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 9,
+    "implemented": 8,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Create a single-page, high-converting marketing landing page for an Indian handmade handicrafts gifting brand that offers curated and customized gift hampers, using a warm, premium, artisan-focused visual design and consistent styling across all sections.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/components/landing/LandingLayout.tsx",
+          "frontend/src/components/landing/Section.tsx",
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Implement a conversion-focused hero section with: brand headline/subheadline in English, primary CTA (e.g., “Build My Gift Hamper”), secondary CTA (e.g., “Explore Curated Hampers”), trust signals (e.g., handmade, ethically sourced, pan-India delivery—wording in English), and a premium hero visual.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/landing/HeroSection.tsx",
+          "frontend/src/components/ui/Button.tsx",
+          "frontend/src/components/ui/Badge.tsx",
+          "frontend/src/utils/scrollToSection.ts",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/landing/HeroSection.tsx",
+          "frontend/src/utils/scrollToSection.ts",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Add key landing page sections tailored to curated/customized gift hampers: (1) Curated Hampers showcase (3–6 cards), (2) “Customize Your Hamper” step-by-step explainer, (3) Artisan story/values section highlighting handmade craftsmanship, (4) Social proof (testimonials/ratings), (5) FAQ, and (6) final CTA banner.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/landing/CuratedHampersSection.tsx",
+          "frontend/src/components/landing/CustomizeExplainerSection.tsx",
+          "frontend/src/components/landing/ArtisanValuesSection.tsx",
+          "frontend/src/components/landing/TestimonialsSection.tsx",
+          "frontend/src/components/landing/FAQSection.tsx",
+          "frontend/src/components/landing/FinalCTASection.tsx",
+          "frontend/src/components/ui/Card.tsx",
+          "frontend/src/components/ui/Accordion.tsx",
+          "frontend/src/components/ui/Separator.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/landing/CuratedHampersSection.tsx",
+          "frontend/src/components/landing/CustomizeExplainerSection.tsx",
+          "frontend/src/components/landing/ArtisanValuesSection.tsx",
+          "frontend/src/components/landing/TestimonialsSection.tsx",
+          "frontend/src/components/landing/FAQSection.tsx",
+          "frontend/src/components/landing/FinalCTASection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Implement a lead-capture form for customized hampers that collects: name, email, phone (optional but recommended), occasion type, budget range, preferred items/themes (free text), quantity, delivery city/pincode (text), and an optional notes field; include client-side validation and a success state.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/landing/CustomizeFormSection.tsx",
+          "frontend/src/hooks/useSubmitHamperLead.ts",
+          "frontend/src/components/ui/Input.tsx",
+          "frontend/src/components/ui/Textarea.tsx",
+          "frontend/src/components/ui/Select.tsx",
+          "frontend/src/components/ui/Label.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/landing/CustomizeFormSection.tsx",
+          "frontend/src/hooks/useSubmitHamperLead.ts",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Add a minimal Motoko backend endpoint to store lead submissions (custom hamper inquiries) and return a confirmation response; persist submissions in stable storage so they survive canister upgrades.",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Add basic analytics-friendly structure without external services: semantic headings, consistent section IDs for CTA scrolling, and event hooks in code (e.g., function calls/logs) for key actions (primary CTA click, form submit success).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/utils/analytics.ts",
+          "frontend/src/components/landing/LandingLayout.tsx",
+          "frontend/src/components/landing/HeroSection.tsx",
+          "frontend/src/components/landing/CuratedHampersSection.tsx",
+          "frontend/src/components/landing/CustomizeFormSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/utils/analytics.ts",
+          "frontend/src/components/landing/HeroSection.tsx",
+          "frontend/src/components/landing/CuratedHampersSection.tsx",
+          "frontend/src/components/landing/CustomizeFormSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Ensure the landing page meets baseline UX quality: fast initial render, optimized images, accessible interactions (keyboard-friendly accordions and focus states), and polished microcopy suitable for a premium gifting brand (English only).",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/components/landing/HeroSection.tsx",
+          "frontend/src/components/landing/CuratedHampersSection.tsx",
+          "frontend/src/components/landing/FAQSection.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/components/landing/HeroSection.tsx",
+          "frontend/src/components/landing/CuratedHampersSection.tsx",
+          "frontend/src/components/landing/FAQSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Create and apply a coherent visual theme (colors, typography, spacing, and component styling) that evokes warm, premium, artisan craftsmanship, and enforce it consistently across the page.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/src/components/landing/LandingLayout.tsx",
+          "frontend/src/components/ui/Button.tsx",
+          "frontend/src/components/ui/Card.tsx",
+          "frontend/src/components/ui/Badge.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Add a lightweight footer with brand reassurance and conversion-supporting links: Contact (mailto/phone text only), Shipping/Returns (static text section or modal), and a short brand note about handmade/craftsmanship.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/landing/FooterSection.tsx",
+          "frontend/src/components/ui/Dialog.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/landing/FooterSection.tsx",
+          "frontend/src/App.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/authorization/MixinAuthorization.mo",
+    "backend/authorization/access-control.mo",
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/artisan-texture-pattern.dim_1024x1024.png",
+    "frontend/public/assets/generated/hamper-set-1.dim_900x600.png",
+    "frontend/public/assets/generated/hamper-set-2.dim_900x600.png",
+    "frontend/public/assets/generated/hamper-set-3.dim_900x600.png",
+    "frontend/public/assets/generated/hero-handicrafts-gifting.dim_1600x900.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/landing/ArtisanValuesSection.tsx",
+    "frontend/src/components/landing/CuratedHampersSection.tsx",
+    "frontend/src/components/landing/CustomizeExplainerSection.tsx",
+    "frontend/src/components/landing/CustomizeFormSection.tsx",
+    "frontend/src/components/landing/FAQSection.tsx",
+    "frontend/src/components/landing/FinalCTASection.tsx",
+    "frontend/src/components/landing/FooterSection.tsx",
+    "frontend/src/components/landing/HeroSection.tsx",
+    "frontend/src/components/landing/TestimonialsSection.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useSubmitHamperLead.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/src/utils/analytics.ts",
+    "frontend/src/utils/scrollToSection.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-high-converting-marketing-landing-page-for-an-indian-handmade-handicrafts-gifting-brand-that-offers-curated-and-customized-gift-hampers-using-a-warm-premium-artisan-focused-visual-design-and-consistent-styling-across-all-sections",
+      "featureTitle": "Create a single-page, high-converting marketing landing page for an Indian handmade handicrafts gifting brand that offers curated and customized gift hampers, using a warm, premium, artisan-focused visual design and consistent styling across all sections.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-conversion-focused-hero-section-with-brand-headline-subheadline-in-english-primary-cta-e-g-build-my-gift-hamper-secondary-cta-e-g-explore-curated-hampers-trust-signals-e-g-handmade-ethically-sourced-pan-india-delivery-wording-in-english-and-a-premium-hero-visual",
+      "featureTitle": "Implement a conversion-focused hero section with: brand headline/subheadline in English, primary CTA (e.g., “Build My Gift Hamper”), secondary CTA (e.g., “Explore Curated Hampers”), trust signals (e.g., handmade, ethically sourced, pan-India delivery—wording in English), and a premium hero visual.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/landing/HeroSection.tsx",
+        "frontend/src/utils/scrollToSection.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-key-landing-page-sections-tailored-to-curated-customized-gift-hampers-1-curated-hampers-showcase-3-6-cards-2-customize-your-hamper-step-by-step-explainer-3-artisan-story-values-section-highlighting-handmade-craftsmanship-4-social-proof-testimonials-ratings-5-faq-and-6-final-cta-banner",
+      "featureTitle": "Add key landing page sections tailored to curated/customized gift hampers: (1) Curated Hampers showcase (3–6 cards), (2) “Customize Your Hamper” step-by-step explainer, (3) Artisan story/values section highlighting handmade craftsmanship, (4) Social proof (testimonials/ratings), (5) FAQ, and (6) final CTA banner.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/landing/ArtisanValuesSection.tsx",
+        "frontend/src/components/landing/CuratedHampersSection.tsx",
+        "frontend/src/components/landing/CustomizeExplainerSection.tsx",
+        "frontend/src/components/landing/FAQSection.tsx",
+        "frontend/src/components/landing/FinalCTASection.tsx",
+        "frontend/src/components/landing/TestimonialsSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-lead-capture-form-for-customized-hampers-that-collects-name-email-phone-optional-but-recommended-occasion-type-budget-range-preferred-items-themes-free-text-quantity-delivery-city-pincode-text-and-an-optional-notes-field-include-client-side-validation-and-a-success-state",
+      "featureTitle": "Implement a lead-capture form for customized hampers that collects: name, email, phone (optional but recommended), occasion type, budget range, preferred items/themes (free text), quantity, delivery city/pincode (text), and an optional notes field; include client-side validation and a success state.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/landing/CustomizeFormSection.tsx",
+        "frontend/src/hooks/useSubmitHamperLead.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-basic-analytics-friendly-structure-without-external-services-semantic-headings-consistent-section-ids-for-cta-scrolling-and-event-hooks-in-code-e-g-function-calls-logs-for-key-actions-primary-cta-click-form-submit-success",
+      "featureTitle": "Add basic analytics-friendly structure without external services: semantic headings, consistent section IDs for CTA scrolling, and event hooks in code (e.g., function calls/logs) for key actions (primary CTA click, form submit success).",
+      "files": [
+        "frontend/src/components/landing/CuratedHampersSection.tsx",
+        "frontend/src/components/landing/CustomizeFormSection.tsx",
+        "frontend/src/components/landing/HeroSection.tsx",
+        "frontend/src/utils/analytics.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-landing-page-meets-baseline-ux-quality-fast-initial-render-optimized-images-accessible-interactions-keyboard-friendly-accordions-and-focus-states-and-polished-microcopy-suitable-for-a-premium-gifting-brand-english-only",
+      "featureTitle": "Ensure the landing page meets baseline UX quality: fast initial render, optimized images, accessible interactions (keyboard-friendly accordions and focus states), and polished microcopy suitable for a premium gifting brand (English only).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/landing/CuratedHampersSection.tsx",
+        "frontend/src/components/landing/FAQSection.tsx",
+        "frontend/src/components/landing/HeroSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-and-apply-a-coherent-visual-theme-colors-typography-spacing-and-component-styling-that-evokes-warm-premium-artisan-craftsmanship-and-enforce-it-consistently-across-the-page",
+      "featureTitle": "Create and apply a coherent visual theme (colors, typography, spacing, and component styling) that evokes warm, premium, artisan craftsmanship, and enforce it consistently across the page.",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-lightweight-footer-with-brand-reassurance-and-conversion-supporting-links-contact-mailto-phone-text-only-shipping-returns-static-text-section-or-modal-and-a-short-brand-note-about-handmade-craftsmanship",
+      "featureTitle": "Add a lightweight footer with brand reassurance and conversion-supporting links: Contact (mailto/phone text only), Shipping/Returns (static text section or modal), and a short brand note about handmade/craftsmanship.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/landing/FooterSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

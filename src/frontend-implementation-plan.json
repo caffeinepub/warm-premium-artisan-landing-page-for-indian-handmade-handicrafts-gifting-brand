@@ -1,0 +1,320 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Warm premium artisan handicrafts gifting landing page (single-page)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a single-page, scrollable, high-converting landing page with warm premium artisan styling and consistent section layout.",
+      "acceptanceCriteria": [
+        "Landing page is implemented as a single, scrollable page with clearly separated sections and consistent spacing/typography/colors.",
+        "Visual theme reads as warm + premium + artisan (e.g., earthy palette, textured accents, refined typography), without using a blue/purple primary palette.",
+        "Page is fully responsive (mobile/tablet/desktop) and maintains readable contrast and accessible font sizing."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page landing composition (one scrollable page) with all required sections, consistent layout container, and responsive structure; ensure no additional top-level routes/pages are introduced."
+        },
+        {
+          "path": "frontend/src/components/landing/LandingLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout wrapper (header/section container/consistent spacing) to enforce consistent styling and section separation across the landing page."
+        },
+        {
+          "path": "frontend/src/components/landing/Section.tsx",
+          "operation": "create",
+          "description": "Create a reusable Section wrapper that standardizes spacing, max-width, and semantic headings to keep visual consistency across all sections."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add the Tailwind entry CSS and base styles used by the app (since the app imports ./index.css from src); include baseline typography, focus styles, and warm artisan theme variables."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme usage (as needed) to support warm premium artisan styling (e.g., container/typography defaults) while keeping the existing CSS-variable color approach."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement a conversion-focused hero with headline/subheadline, two CTAs, trust-signal badges, and a premium hero visual.",
+      "acceptanceCriteria": [
+        "Hero contains 2 CTAs with distinct visual hierarchy (primary vs secondary).",
+        "Hero includes at least 3 trust signals displayed as badges/chips with icons.",
+        "CTA buttons scroll to the relevant sections (customization form / curated hampers section)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/HeroSection.tsx",
+          "operation": "create",
+          "description": "Implement the hero section with English headline/subheadline, primary/secondary CTA buttons, trust-signal badges with icons, and the hero image wired from frontend/public/assets/generated/hero-handicrafts-gifting.dim_1600x900.png; ensure CTAs trigger scroll-to-section behavior."
+        },
+        {
+          "path": "frontend/src/components/ui/Button.tsx",
+          "operation": "create",
+          "description": "Create a shadcn/ui-style Button component wrapper for consistent primary/secondary CTA styling across the page. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ui/Badge.tsx",
+          "operation": "create",
+          "description": "Create a shadcn/ui-style Badge/Chip component for trust signals (with icon slot) used in the hero and elsewhere. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/utils/scrollToSection.ts",
+          "operation": "create",
+          "description": "Add a small utility to scroll to stable section IDs (with optional offset) for CTA interactions on mobile/desktop."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire HeroSection into the landing page composition and ensure CTA targets match the section IDs used across the page."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add curated hampers, customization explainer, artisan story/values, social proof, interactive FAQ, and final CTA banner sections with consistent design.",
+      "acceptanceCriteria": [
+        "Each section has a clear heading, supporting copy in English, and a consistent component style (cards, chips, separators).",
+        "Curated Hampers section shows at least 3 hamper examples with name, short description, and ‘Request This Hamper’ CTA.",
+        "FAQ is interactive (accordion-style) and includes at least 5 questions relevant to customization, lead time, shipping, and bulk/corporate gifting.",
+        "Final CTA section reiterates primary conversion action and links to the form."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/CuratedHampersSection.tsx",
+          "operation": "create",
+          "description": "Create the Curated Hampers showcase with 3–6 cards, each with image, name, short description, and a ‘Request This Hamper’ CTA that scrolls to the customization form; wire images from frontend/public/assets/generated/hamper-set-1.dim_900x600.png, frontend/public/assets/generated/hamper-set-2.dim_900x600.png, and frontend/public/assets/generated/hamper-set-3.dim_900x600.png."
+        },
+        {
+          "path": "frontend/src/components/landing/CustomizeExplainerSection.tsx",
+          "operation": "create",
+          "description": "Create a step-by-step explainer section for customization (clear numbered steps, premium microcopy) that leads naturally into the lead form."
+        },
+        {
+          "path": "frontend/src/components/landing/ArtisanValuesSection.tsx",
+          "operation": "create",
+          "description": "Create the artisan story/values section emphasizing handmade craftsmanship, ethical sourcing, and premium finishing with warm premium typography."
+        },
+        {
+          "path": "frontend/src/components/landing/TestimonialsSection.tsx",
+          "operation": "create",
+          "description": "Create a social proof section with testimonials/ratings styled consistently with the rest of the page (cards, stars/badges as appropriate)."
+        },
+        {
+          "path": "frontend/src/components/landing/FAQSection.tsx",
+          "operation": "create",
+          "description": "Create an interactive FAQ section (accordion-style) with at least 5 relevant questions; ensure keyboard accessibility and visible focus states for triggers."
+        },
+        {
+          "path": "frontend/src/components/landing/FinalCTASection.tsx",
+          "operation": "create",
+          "description": "Create a final CTA banner that reiterates the primary conversion action and scrolls to the customization form section."
+        },
+        {
+          "path": "frontend/src/components/ui/Card.tsx",
+          "operation": "create",
+          "description": "Create a shadcn/ui-style Card component for consistent premium card styling across curated hampers, testimonials, and other card-based sections. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ui/Accordion.tsx",
+          "operation": "create",
+          "description": "Create an accessible accordion component (keyboard-friendly triggers, focus management, and ARIA where applicable) used by the FAQ section. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ui/Separator.tsx",
+          "operation": "create",
+          "description": "Create a lightweight separator/divider component to keep section separation consistent. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire all required sections into the single-page layout in the correct order and ensure each is reachable via in-page scroll navigation (no orphan sections/components)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement a lead-capture customization form with validation, backend submission call, loading state, and success confirmation.",
+      "acceptanceCriteria": [
+        "Form validates required fields (name, email, occasion, budget, quantity) and shows inline error messages.",
+        "On submit, form calls the backend and shows a non-blocking loading state; on success it resets (or preserves) fields and displays a confirmation message.",
+        "No third-party email/SMS integrations are used."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/CustomizeFormSection.tsx",
+          "operation": "create",
+          "description": "Create the lead-capture form UI collecting required fields (name, email, occasion, budget, quantity) plus optional fields (phone, preferred items/themes, delivery city/pincode, notes); implement client-side validation with inline errors, a loading state, and a success confirmation message."
+        },
+        {
+          "path": "frontend/src/hooks/useSubmitHamperLead.ts",
+          "operation": "create",
+          "description": "Add a hook that uses the existing actor to submit a hamper lead (submitHamperLead) and exposes loading/success/error state for the form."
+        },
+        {
+          "path": "frontend/src/components/ui/Input.tsx",
+          "operation": "create",
+          "description": "Create a shadcn/ui-style Input component wrapper to standardize text/number inputs and focus styles used in the lead form. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ui/Textarea.tsx",
+          "operation": "create",
+          "description": "Create a shadcn/ui-style Textarea component wrapper for preferred items/themes and notes fields, with consistent styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ui/Select.tsx",
+          "operation": "create",
+          "description": "Create a shadcn/ui-style Select component wrapper (or equivalent accessible select) for occasion type and budget range fields. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ui/Label.tsx",
+          "operation": "create",
+          "description": "Create a shadcn/ui-style Label component to ensure consistent form labeling and accessibility. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire CustomizeFormSection into the landing page and ensure its section ID matches CTA scroll targets (primary CTA and final CTA)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add analytics-friendly structure with semantic headings, stable section IDs, and centralized event hooks for key actions.",
+      "acceptanceCriteria": [
+        "Each major section has a stable DOM id (e.g., #curated, #customize, #testimonials, #faq).",
+        "Primary CTA scroll behavior uses these IDs and works on mobile and desktop.",
+        "Key actions are centralized in code (single handler functions) so adding real analytics later is straightforward, without integrating any external analytics SDK now."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/utils/analytics.ts",
+          "operation": "create",
+          "description": "Create centralized event hook functions (e.g., logPrimaryCTAClick, logSecondaryCTAClick, logFormSubmitSuccess) implemented as internal logs/function calls only (no external analytics SDK)."
+        },
+        {
+          "path": "frontend/src/components/landing/LandingLayout.tsx",
+          "operation": "modify",
+          "description": "Ensure semantic headings structure (h1 in hero, h2 per major section) and stable section IDs are applied consistently through the shared layout/Section wrapper."
+        },
+        {
+          "path": "frontend/src/components/landing/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Connect hero CTA clicks to centralized analytics hook functions and use stable section IDs for scroll behavior."
+        },
+        {
+          "path": "frontend/src/components/landing/CuratedHampersSection.tsx",
+          "operation": "modify",
+          "description": "Ensure the curated section has a stable ID (e.g., curated) and that ‘Request This Hamper’ CTAs use the shared scroll utility and centralized action handlers."
+        },
+        {
+          "path": "frontend/src/components/landing/CustomizeFormSection.tsx",
+          "operation": "modify",
+          "description": "Call centralized analytics hook functions on successful form submission and ensure the form section uses a stable ID (e.g., customize)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Meet baseline UX quality: fast render, optimized static images, accessible interactions, and polished premium microcopy (English only).",
+      "acceptanceCriteria": [
+        "All interactive elements are keyboard accessible and show visible focus styles.",
+        "Images are served as static assets and sized appropriately to avoid layout shift.",
+        "Copy is coherent, premium in tone, and consistent (no placeholder lorem ipsum)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add visible focus styles and baseline typography rules to improve keyboard accessibility and premium feel; ensure contrast and font sizing remain accessible."
+        },
+        {
+          "path": "frontend/src/components/landing/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Ensure hero image uses the static asset frontend/public/assets/generated/hero-handicrafts-gifting.dim_1600x900.png with explicit sizing attributes and appropriate loading behavior to minimize layout shift."
+        },
+        {
+          "path": "frontend/src/components/landing/CuratedHampersSection.tsx",
+          "operation": "modify",
+          "description": "Ensure hamper card images use static assets (frontend/public/assets/generated/hamper-set-1.dim_900x600.png, frontend/public/assets/generated/hamper-set-2.dim_900x600.png, frontend/public/assets/generated/hamper-set-3.dim_900x600.png) with explicit sizing attributes to reduce CLS and improve perceived performance."
+        },
+        {
+          "path": "frontend/src/components/landing/FAQSection.tsx",
+          "operation": "modify",
+          "description": "Verify accordion interactions are keyboard accessible (tab/focus/enter/space) and that focus styles remain visible on all FAQ triggers."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Review and finalize all on-page copy for premium, coherent English microcopy (remove any placeholders) and ensure fast initial render by keeping content primarily static with lightweight interactivity."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create and apply a coherent warm, premium artisan visual theme (colors, typography, spacing, component styling) consistently across the page.",
+      "acceptanceCriteria": [
+        "Theme includes a defined primary/secondary color set, background treatment, and typography pairing used across hero, cards, buttons, and FAQ.",
+        "Buttons, cards, and badges share a consistent design system (radii, shadows, borders).",
+        "Theme avoids a default ‘generic SaaS’ look and does not rely on a blue/purple primary palette."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define warm artisan CSS variables (earthy primary/secondary, muted backgrounds) and add a subtle background treatment using frontend/public/assets/generated/artisan-texture-pattern.dim_1024x1024.png (e.g., as a low-contrast page texture) while maintaining readability."
+        },
+        {
+          "path": "frontend/src/components/landing/LandingLayout.tsx",
+          "operation": "modify",
+          "description": "Apply consistent spacing, background layering, and typography choices across sections to enforce the warm premium artisan design system."
+        },
+        {
+          "path": "frontend/src/components/ui/Button.tsx",
+          "operation": "modify",
+          "description": "Ensure Button variants (primary/secondary/ghost) align with the warm artisan theme (radii/shadows/borders) and are used consistently across the landing page. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ui/Card.tsx",
+          "operation": "modify",
+          "description": "Ensure Card styling (borders/shadows/radii) matches the theme and is consistent across curated hampers, testimonials, and banners. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ui/Badge.tsx",
+          "operation": "modify",
+          "description": "Ensure badge/chip styling matches the theme and works on textured backgrounds with accessible contrast. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Add a lightweight footer with contact links, Shipping/Returns information without navigating away, and a handmade brand note.",
+      "acceptanceCriteria": [
+        "Footer includes at least one contact method presented as text and/or clickable links (mailto: / tel:).",
+        "Shipping/Returns information is present and readable without navigating away (either inline section or dialog)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/FooterSection.tsx",
+          "operation": "create",
+          "description": "Create a footer with brand reassurance copy, mailto/tel contact links, and a Shipping/Returns info presentation that does not require navigation away (inline expandable block or dialog)."
+        },
+        {
+          "path": "frontend/src/components/ui/Dialog.tsx",
+          "operation": "create",
+          "description": "Create a shadcn/ui-style Dialog component (accessible modal) for displaying Shipping/Returns details without leaving the page. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire FooterSection at the bottom of the single-page layout and ensure it matches the overall theme and spacing."
+        }
+      ]
+    }
+  ]
+}

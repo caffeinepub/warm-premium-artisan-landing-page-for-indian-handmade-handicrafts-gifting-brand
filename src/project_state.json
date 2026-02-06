@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Design a high-converting landing page for an Indian handmade handicrafts gifting brand offering curated and customized gift hampers, with a warm, premium, artisan-focused design.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Warm premium hero banner featuring an Indian artisan gifting aesthetic (hero-handicrafts-gifting.dim_1600x900.png)\n- Set of 3 product/hamper card images with handcrafted gift hamper styling (hamper-set-1.dim_900x600.png)\n- Set of 3 product/hamper card images with handcrafted gift hamper styling (hamper-set-2.dim_900x600.png)\n- Set of 3 product/hamper card images with handcrafted gift hamper styling (hamper-set-3.dim_900x600.png)\n- Subtle earthy seamless pattern/texture background (artisan-texture-pattern.dim_1024x1024.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-high-converting-marketing-landing-page-for-an-indian-handmade-handicrafts-gifting-brand-that-offers-curated-and-customized-gift-hampers-using-a-warm-premium-artisan-focused-visual-design-and-consistent-styling-across-all-sections",
+      "title": "Create a single-page, high-converting marketing landing page for an Indian handmade handicrafts gifting brand that offers curated and customized gift hampers, using a warm, premium, artisan-focused visual design and consistent styling across all sections.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-conversion-focused-hero-section-with-brand-headline-subheadline-in-english-primary-cta-e-g-build-my-gift-hamper-secondary-cta-e-g-explore-curated-hampers-trust-signals-e-g-handmade-ethically-sourced-pan-india-delivery-wording-in-english-and-a-premium-hero-visual",
+      "title": "Implement a conversion-focused hero section with: brand headline/subheadline in English, primary CTA (e.g., “Build My Gift Hamper”), secondary CTA (e.g., “Explore Curated Hampers”), trust signals (e.g., handmade, ethically sourced, pan-India delivery—wording in English), and a premium hero visual.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-key-landing-page-sections-tailored-to-curated-customized-gift-hampers-1-curated-hampers-showcase-3-6-cards-2-customize-your-hamper-step-by-step-explainer-3-artisan-story-values-section-highlighting-handmade-craftsmanship-4-social-proof-testimonials-ratings-5-faq-and-6-final-cta-banner",
+      "title": "Add key landing page sections tailored to curated/customized gift hampers: (1) Curated Hampers showcase (3–6 cards), (2) “Customize Your Hamper” step-by-step explainer, (3) Artisan story/values section highlighting handmade craftsmanship, (4) Social proof (testimonials/ratings), (5) FAQ, and (6) final CTA banner.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-lead-capture-form-for-customized-hampers-that-collects-name-email-phone-optional-but-recommended-occasion-type-budget-range-preferred-items-themes-free-text-quantity-delivery-city-pincode-text-and-an-optional-notes-field-include-client-side-validation-and-a-success-state",
+      "title": "Implement a lead-capture form for customized hampers that collects: name, email, phone (optional but recommended), occasion type, budget range, preferred items/themes (free text), quantity, delivery city/pincode (text), and an optional notes field; include client-side validation and a success state.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-analytics-friendly-structure-without-external-services-semantic-headings-consistent-section-ids-for-cta-scrolling-and-event-hooks-in-code-e-g-function-calls-logs-for-key-actions-primary-cta-click-form-submit-success",
+      "title": "Add basic analytics-friendly structure without external services: semantic headings, consistent section IDs for CTA scrolling, and event hooks in code (e.g., function calls/logs) for key actions (primary CTA click, form submit success).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-landing-page-meets-baseline-ux-quality-fast-initial-render-optimized-images-accessible-interactions-keyboard-friendly-accordions-and-focus-states-and-polished-microcopy-suitable-for-a-premium-gifting-brand-english-only",
+      "title": "Ensure the landing page meets baseline UX quality: fast initial render, optimized images, accessible interactions (keyboard-friendly accordions and focus states), and polished microcopy suitable for a premium gifting brand (English only).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-and-apply-a-coherent-visual-theme-colors-typography-spacing-and-component-styling-that-evokes-warm-premium-artisan-craftsmanship-and-enforce-it-consistently-across-the-page",
+      "title": "Create and apply a coherent visual theme (colors, typography, spacing, and component styling) that evokes warm, premium, artisan craftsmanship, and enforce it consistently across the page.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-lightweight-footer-with-brand-reassurance-and-conversion-supporting-links-contact-mailto-phone-text-only-shipping-returns-static-text-section-or-modal-and-a-short-brand-note-about-handmade-craftsmanship",
+      "title": "Add a lightweight footer with brand reassurance and conversion-supporting links: Contact (mailto/phone text only), Shipping/Returns (static text section or modal), and a short brand note about handmade/craftsmanship.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Design a high-converting landing page for an Indian handmade handicrafts gifting brand (curated/customized gift hampers) with warm, premium, artisan-focused design.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add a minimal Motoko backend endpoint to store lead submissions (custom hamper inquiries) and return a confirmation response; persist submissions in stable storage so they survive canister upgrades.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Warm, premium artisan landing page for Indian handmade handicrafts gifting brand",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

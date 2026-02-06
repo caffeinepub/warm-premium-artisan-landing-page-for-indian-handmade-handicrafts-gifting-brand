@@ -1,0 +1,77 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-06T15:45:40.753Z",
+  "summary": "Diff adds a full single-page artisan-themed landing page with hero, curated hampers, explainer, lead form, values, testimonials, FAQ, final CTA, and footer. It also adds a Motoko backend method to submit and query leads plus analytics/scroll utilities. Key gaps are backend persistence/confirmation fields and some missing section IDs required for analytics-friendly scrolling.",
+  "missing_requirements": [
+    {
+      "id": "REQ-5",
+      "requirement": "Persist lead submissions in stable storage so they survive canister upgrades.",
+      "reason": "Backend stores leads in an in-memory `var leads = Array.empty<HamperLead>()` with no `stable var` or explicit upgrade hooks/migration shown.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Backend update method must return an ID and timestamp (or equivalent confirmation fields) for each inquiry submission.",
+      "reason": "`submitHamperLead` returns `async ()` and only appends the lead; no ID/timestamp is generated or returned.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "requirement": "Each major section has a stable DOM id (e.g., #curated, #customize, #testimonials, #faq) for CTA scrolling and analytics-friendly structure.",
+      "reason": "Only some sections show explicit ids (`id=\"curated\"`, `id=\"customize\"`, `id=\"faq\"`). Other major sections in the page (e.g., testimonials, values/story, explainer, final CTA) do not show ids in the provided diff.",
+      "evidence": [
+        "frontend/src/components/landing/CuratedHampersSection.tsx",
+        "frontend/src/components/landing/CustomizeFormSection.tsx",
+        "frontend/src/components/landing/FAQSection.tsx",
+        "frontend/src/components/landing/TestimonialsSection.tsx",
+        "frontend/src/components/landing/ArtisanValuesSection.tsx",
+        "frontend/src/components/landing/CustomizeExplainerSection.tsx",
+        "frontend/src/components/landing/FinalCTASection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added an authorization/user-profile system and admin-token initialization flow unrelated to a marketing landing page lead capture backend.",
+      "reason": "BuildRequest only asks for a minimal endpoint to store/retrieve lead submissions; diff adds AccessControl/MixinAuthorization, user profile CRUD, and admin token initialization via URL parameter.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/utils/urlParams.ts"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/landing/ArtisanValuesSection.tsx",
+    "frontend/src/components/landing/CuratedHampersSection.tsx",
+    "frontend/src/components/landing/CustomizeExplainerSection.tsx",
+    "frontend/src/components/landing/CustomizeFormSection.tsx",
+    "frontend/src/components/landing/FAQSection.tsx",
+    "frontend/src/components/landing/FinalCTASection.tsx",
+    "frontend/src/components/landing/FooterSection.tsx",
+    "frontend/src/components/landing/HeroSection.tsx",
+    "frontend/src/components/landing/TestimonialsSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useSubmitHamperLead.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/utils/analytics.ts",
+    "frontend/src/utils/scrollToSection.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

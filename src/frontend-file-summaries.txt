@@ -1,0 +1,16 @@
+{
+  "frontend/src/index.css": "Global styles with warm artisan color palette (terracotta, cream, earthy tones), custom fonts (Cormorant Garamond for headings, Inter for body), textured background pattern, and accessibility focus styles; removed problematic @apply directive with opacity.",
+  "frontend/src/App.tsx": "Main application component that composes all landing page sections in a single scrollable page layout.",
+  "frontend/src/components/landing/HeroSection.tsx": "Hero section with headline, subheadline, trust signal badges, two CTAs (primary and secondary), and hero image with scroll-to-section functionality.",
+  "frontend/src/components/landing/CuratedHampersSection.tsx": "Displays three curated hamper cards with images, descriptions, and \"Request This Hamper\" CTAs that scroll to the customization form; uses inline Tailwind classes for card styling with backdrop blur.",
+  "frontend/src/components/landing/CustomizeExplainerSection.tsx": "Four-step visual explainer showing the customization process with numbered cards and icons; uses inline Tailwind classes for card styling with backdrop blur.",
+  "frontend/src/components/landing/CustomizeFormSection.tsx": "Lead capture form with validation for name, email, occasion, budget, preferences, quantity, and delivery location; includes success state and backend submission; uses inline Tailwind classes for card styling.",
+  "frontend/src/components/landing/ArtisanValuesSection.tsx": "Showcases brand values (handcrafted excellence, ethical sourcing, premium quality, community impact) with icons and descriptive cards; updated to use Tailwind v3 'shrink-0' class instead of deprecated 'flex-shrink-0'.",
+  "frontend/src/components/landing/TestimonialsSection.tsx": "Social proof section displaying three customer testimonials with 5-star ratings in card format; uses inline Tailwind classes for card styling with backdrop blur.",
+  "frontend/src/components/landing/FAQSection.tsx": "Interactive accordion-style FAQ section with six questions covering customization, lead time, shipping, samples, returns, and corporate gifting; fixed conflicting border classes by removing 'border-0'.",
+  "frontend/src/components/landing/FinalCTASection.tsx": "Conversion-focused banner section with headline and CTA button that scrolls to the customization form; uses inline Tailwind classes for card styling with backdrop blur.",
+  "frontend/src/components/landing/FooterSection.tsx": "Footer with brand information, contact links (email/phone), shipping & returns policy dialog, and attribution.",
+  "frontend/src/hooks/useSubmitHamperLead.ts": "React Query mutation hook for submitting hamper lead data to the backend actor.",
+  "frontend/src/utils/scrollToSection.ts": "Utility function for smooth scrolling to section IDs with configurable offset.",
+  "frontend/src/utils/analytics.ts": "Centralized analytics event logging functions (console logs as placeholders for future analytics SDK integration)."
+}
